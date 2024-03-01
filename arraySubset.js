@@ -159,10 +159,20 @@ function isSubset(arr1, arr2, n, m) {
 
 
 
-let arr1 = [11, 1, 13, 21, 3, 7];
-let arr2 = [11, 3, 7, 1];
-let n = arr1.length;
-let m = arr2.length;
+// let arr1 = [11, 1, 13, 21, 3, 7];
+// let arr2 = [11, 3, 7, 1];
+// let n = arr1.length;
+// let m = arr2.length;
 
-let subset = isSubset(arr1, arr2, n, m);
-console.log(subset);
+// let subset = isSubset(arr1, arr2, n, m);
+// console.log(subset);
+
+
+        // Define the data array
+        let data = [1, 2, 3, 4, 5, 6];
+
+        // Convert the data array to a string using join() method
+        let dataString = data.join(", ");
+
+        // Set the innerHTML of the element with id 'dataDisplay' to the dataString
+        document.getElementById('dataDisplay').innerHTML = dataString;

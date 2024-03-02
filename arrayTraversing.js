@@ -23,3 +23,8 @@ getElement(second,elb)
 
 //=============================================
 
+let arr = [22,33,44,55,66,77]
+let arrResult = arr.length
+
+let result = arr.includes(22)
+console.log(result)

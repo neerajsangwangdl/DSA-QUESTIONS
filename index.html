@@ -12,7 +12,26 @@
 </head>
 <body>
 
-    
+<h2>DSA Questions</h2>
+
+<script>
+function insertElement(){
+    let data = [60,30,70,10,44,77,22]
+    let newel = 100;
+    let position = 1
+    for(let i = data.length-1;i>=0;i--){
+        if(i>=position){
+            data[i+1]=data[i]
+            if(i==position){
+                data[i]=newel
+                console.log(data)
+            }
+        }
+    }
+}
+
+</script>
 
 </body>
+<button onclick="insertElement()">insert element</button>
 </html>

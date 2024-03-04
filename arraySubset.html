@@ -5,48 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-// https://chat.openai.com/share/98996430-4fc5-4f41-bafb-cec2ef56d44d
 <body>
 
     <h2>Array subset</h2>
     <script>
 //Array subset of another array.
 
-function isSubset(arr1, arr2, n, m) {
-
-for (let i = 0; i < m; i++) {
-    let index = arr1.indexOf(arr2[i]);
-    if (index==-1) {
-        return "No";
-    }
-}
-return "Yes";
-}
-
-
-
+function isSubset() {
 let arr1 = [11, 1, 13, 21, 3, 7];
 let arr2 = [11, 3, 7, 1];
 let n = arr1.length;
 let m = arr2.length;
+for (let i = 0; i < m; i++) {
+    let index = arr1.indexOf(arr2[i]);
+    if (index==-1) {
+        console.log("No")
+        return "No";
+    }
+}
+console.log("Yes")
+return "Yes";
+}
+isSubset()
 
 
 
-let subset = isSubset(arr1, arr2, n, m);
-console.log(subset);
+
+
 //========================================================================
 
-function isSubset(array5, array6) {
-// Check if every element of array1 exists in array2
-return array5.every(element => array6.includes(element));
-}
+//function isSubset(array5, array6) {
+// // Check if every element of array1 exists in array2
+// return array5.every(element => array6.includes(element));
+//}
 
 // Example arrays
-let array5 = [1, 2, 3];
-let array6 = [0, 1, 2, 3, 4, 5];
+// let array5 = [1, 2, 3];
+// let array6 = [0, 1, 2, 3, 4, 5];
 
 // Check if array1 is a subset of array2
-console.log(isSubset(array1, array2)); // Output: true
+//console.log(isSubset(array1, array2)); // Output: true
 
 
     </script>

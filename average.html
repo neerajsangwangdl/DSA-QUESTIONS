@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Average in a stream.
+        function findAverage() {
+            let arr = [10, 20, 30, 40, 50, 60];
+            let n = arr.length;
+            let average = findAverage(arr, n);
+            let value = 0;
+            let result = 0;
+            for (let i = 0; i < n; i++) {
+                const element = arr[i];
+                value += element;
+                // console.log(value);
+                result = value / (i + 1);
+                console.log("The average is: " + result.toFixed(2));
+
+            }
+        }
+
+        findAverage()
+        
+
+
+    </script>
+</body>
+
+</html>

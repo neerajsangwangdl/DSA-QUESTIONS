@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            // Key Pair.
+
+function keyPair(arr, n, x) {
+    let diff = 0;
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        diff = x - arr[i];
+        if (arr.includes(diff) == true) {
+            let index = arr.indexOf(diff);
+            if (index != i) {
+                count++;
+            }
+        }
+    }
+    
+    if (count > 1) {
+        return ("Yes");
+    } else {
+        return ("No");
+    }
+}
+
+let arr = [1, 2, 4, 3, 6];
+let n = arr.length;
+let x = 10;
+
+let key = keyPair(arr, n, x);
+console.log(key);
+
+
+        </script>
+</body>
+</html>

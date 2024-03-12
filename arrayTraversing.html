@@ -6,37 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        // Neeraj 
-// Search the element by the index no.
+        <script>
+            let  array = [1, 2, 3, 4, 5];
 
-function getElement(dataTraversing,el){
+// for loop example
 
-if(el<=dataTraversing.length){
-    console.warn(dataTraversing[el]);
-}else{
-    console.warn("The element is not in the array")
+console.log('------------ for loop Example----------')
 
-}
+for(let i = 0; i < array.length; i++){
+  console.log(i, ' ->' ,array[i])
 }
 
-const dataTraversing = [1,2,3,4,5,6,7,8]
-const el = 4
-getElement(dataTraversing,4)
+// forEach example
 
-console.log("Neeraj")
+console.log('------------ forEach Example----------')
+array.forEach((index,element)=>{console.log(element, ' ->' , index )})
 
-const second = [33,44,55,66,77]
-const elb = 3
-getElement(second,elb)
+// Map example
 
-//=============================================
+console.log('------------ Map Example----------')
 
-let arr = [22,33,44,55,66,77]
-let arrResult = arr.length
+array.map((index, element)=>{console.log(element, ' -> ', index)})
 
-let result = arr.includes(22)
-console.log(result)
-    </script>
+// for of loop example
+
+console.log('------------ for of Example----------')
+
+for(let element of array ){
+  console.log(element)
+}
+
+// for in loop example
+
+console.log('------------ for in Example----------')
+
+for(let element in array){
+    console.log(element, '-> ',array[element])
+}
+
+        </script>
 </body>
 </html>

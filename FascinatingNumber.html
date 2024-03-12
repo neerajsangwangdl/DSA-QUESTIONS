@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Fascinating Number.
+
+function facinating(concatNum) {
+    for (let i = 1; i <= 9; i++) {
+        if (concatNum.indexOf(i) == -1) {
+            return (number + " is not Facinating.");
+        }
+    }
+    return ( number + " is Facinating.");
+}
+
+let number = (192).toString();
+let number2 = (number * 2).toString();
+let number3 = (number * 3).toString();
+let concatNum = number + number2 + number3;
+
+console.log(typeof (concatNum), concatNum);
+let facinatingNumber = facinating(concatNum);
+console.log(facinatingNumber);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  Write a function that performs a binary search on a sorted array.
+
+        function binarySearch(arr, target) {
+            let low = 0;
+            let high = arr.length - 1;
+            while (low <= high) {
+                const mid = Math.floor((low + high) / 2);
+                if (arr[mid] === target) {
+                    return mid;
+                } else if (arr[mid] < target) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+            return -1;
+        }
+
+        const array = [2, 4, 6, 8, 10, 12, 14];
+        console.log(binarySearch(array, 10)); // Output: 4
+
+    </script>
+</body>
+
+</html>

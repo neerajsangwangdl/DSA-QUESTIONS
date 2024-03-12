@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Check if two arrays are equal or not.
+
+    function isEqual() {
+
+      let arr1 = [1, 2, 5, 4, 0];
+      let arr2 = [2, 4, 5, 0, 6];
+      let n = arr1.length;
+      let m = arr2.length;
+
+      const obj = new Object();
+      let alert = "Array is equal.";
+
+      for (let i = 0; i < n; i++) {
+
+        if (arr1[i] in obj == false) {
+          obj[arr1[i]] = i;
+        }
+      }
+
+      for (let j = 0; j < m; j++) {
+
+        if (arr2[j] in obj == true) {
+        } else {
+          alert = "Array is not equal.";
+        }
+      }
+
+      if (n != m) {
+        return ("Array has different length.");
+      } else if (n == m) {
+        alert;
+      }
+      return alert;
+    }
+
+
+
+    isEqual();
+
+  </script>
+</body>
+
+</html>

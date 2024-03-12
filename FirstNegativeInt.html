@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            // First negative integer in every window of size k
+
+function firstNegativeInteger(arr, n, k) {
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        
+        for (let j = i; j < i + k; j++) {
+        
+            if (arr[j] < 0) {
+                console.log(arr[j]);
+            }
+        }
+    }
+}
+
+let arr = [-8, 2, 3, -6, 10];
+let n = arr.length;
+let k = 2;
+
+let negativeInt = firstNegativeInteger(arr, n, k);
+console.log(negativeInt);
+
+
+        </script>
+</body>
+</html>

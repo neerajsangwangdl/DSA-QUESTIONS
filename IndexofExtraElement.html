@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            // Index of an extra element.
+
+function findExtra(arrA, arrB, n) {
+  
+  for (let i = 0; i < n; i++) {
+      // if(arrA[i]!=arrB[i]){
+      //     return i;
+      // }
+      let index = arrB.indexOf(arrA[i]);
+
+      if (index == -1) {
+          let extraElement = arrA.indexOf(arrA[i]);
+          console.log("Missing element is: " + arrA[i] + " and index is: " + extraElement);
+      }
+  }
+
+}
+
+let arrA = [2, 4, 6, 8, 9, 10, 11, 12];
+let arrB = [2, 4, 6, 8, 10, 12];
+let n = arrA.length;
+
+let missing = findExtra(arrA, arrB, n);
+// console.log(missing);
+
+
+        </script>
+</body>
+</html>

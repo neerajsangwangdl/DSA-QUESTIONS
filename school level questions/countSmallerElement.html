@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            class Solution {
+    countOfElements(arr, n, x) {
+        let low = 0;
+        let high = n - 1;
+        let position = -1;
+        
+        // Binary search to find the position of X
+        while (low <= high) {
+            let mid = Math.floor((low + high) / 2);
+            if (arr[mid] <= x) {
+                position = mid;
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        
+        // If X is not found, position will remain -1
+        // Otherwise, position + 1 gives the count of elements less than or equal to X
+        return position + 1;
+    }
+}
+
+const solution = new Solution();
+const arr = [1, 2, 4, 5, 8, 10];
+const n = arr.length;
+const x = 9;
+console.log(solution.countOfElements(arr, n, x)); // Output: 5
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPalindromicArray(arr) {
+            const reversedArr = arr.slice().reverse(); // Create a copy of the array and reverse it
+            return JSON.stringify(arr) === JSON.stringify(reversedArr);
+        }
+
+        // Test cases
+        console.log(isPalindromicArray([1, 2, 3, 2, 1])); // Output: true
+        console.log(isPalindromicArray([4, 7, 2, 7, 4])); // Output: true
+        console.log(isPalindromicArray([1, 2, 3, 4, 5])); // Output: false
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+
+
+
+<!-- Question:
+Consider a student object representing information about a student. 
+It has properties like name, age, grade, and subjects. Implement a 
+method addSubject() which takes a new subject as input and adds it 
+to the subjects array of the student. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student ={
+            studentName : 'Neeraj',
+            class : '10th',
+            subject : ['English','Math','S.ST'],
+            grade : 'A+',
+            addSubject : function(newSubject){
+                this.subject.push(newSubject)
+            }
+        }
+
+        student.addSubject("Science")
+
+        console.log(student.subject)
+        
+    </script>
+</body>
+</html>

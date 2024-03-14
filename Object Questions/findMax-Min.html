@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- You are given an array of numbers. Write a function in JavaScript 
+    called findMaxMin to find the maximum and minimum numbers in the array. 
+    Your function should return an object with properties max and min, containing 
+    the maximum and minimum numbers respectively. -->
+
+
+
+
+    <script>
+        function findMaxMin(arr) {
+    if (arr.length === 0) {
+        return { max: null, min: null };
+    }
+
+    let max = arr[0];
+    let min = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    return { max: max, min: min };
+}
+
+// Example usage
+let numbers = [5, 3, 9, 1, 7, 4];
+let result = findMaxMin(numbers);
+console.log(result); // Output: { max: 9, min: 1 }
+
+    </script>
+</body>
+</html>

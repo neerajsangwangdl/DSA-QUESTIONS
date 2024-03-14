@@ -31,29 +31,47 @@ findLongestName(); // Output: "Christopher"
 
 /////////////////////////////////////////////////////////////////
 
-// function findLongestName(names) {
-//     return names.reduce((longestName, currentName) => {
-//         return currentName.length > longestName.length ? currentName : longestName;
-//     }, "");
-// }
+function findLongestName(names) {
+    return names.reduce((longestName, currentName) => {
+        return currentName.length > longestName.length ? currentName : longestName;
+    }, "");
+}
 
-// // Example usage:
-// const namesArray = ["John", "Alice", "Eleanor", "Christopher", "Elizabeth"];
-// const longestNameb = findLongestName(namesArray);
-// console.log("Longest name:", longestNameb);
+// Example usage:
+const namesArray = ["John", "Alice", "Eleanor", "Christopher", "Elizabeth"];
+const longestNameb = findLongestName(namesArray);
+console.log("Longest name:", longestNameb);
 
 
 //===========================================================================
 
 
-// function findLongestName(names) {
-//     return names.sort((a, b) => b.length - a.length)[0];
-// }
+function findLongestName(names) {
+    return names.sort((a, b) => b.length - a.length)[0];
+}
 
-// // Example usage:
-// const namesArrayb = ["John", "Alice", "Eleanor", "Christopher", "Elizabeth"];
-// const longestNamec = findLongestName(namesArrayb);
-// console.log("Longest name:", longestNamec);
+// Example usage:
+const namesArrayb = ["John", "Alice", "Eleanor", "Christopher", "Elizabeth"];
+const longestNamec = findLongestName(namesArrayb);
+console.log("Longest name:", longestNamec);
+
+
+//--------------------------------------------------------------------------------
+
+
+function longestWordLength(sentence) {
+    const words = sentence.split(' ');
+    let maxLength = 0;
+    for (const word of words) {
+        if (word.length > maxLength) {
+            maxLength = word.length;
+        }
+    }
+    return maxLength;
+}
+
+console.log(longestWordLength("The quick brown fox jumps over the lazy dog")); // Output: 5
+
 
     </script>
 </body>

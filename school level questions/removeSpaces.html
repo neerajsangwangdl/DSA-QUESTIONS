@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         Algorithm:
+
+        // Initialize an empty string to store the result.
+        // Iterate through each character of the input string.
+        // Check if the character is not a space.
+        // If it's not a space, append it to the result string.
+        // Finally, return the result string without spaces.
+
+        // Function to remove spaces from a string
+        function removeSpaces(str) {
+            let result = ''; // Initialize an empty string to store the result
+
+            // Iterate through each character of the input string
+            for (let i = 0; i < str.length; i++) {
+                // Check if the character is not a space
+                if (str[i] !== ' ') {
+                    // Append the character to the result string
+                    result += str[i];
+                }
+            }
+
+            return result; // Return the result string without spaces
+        }
+
+        // Example usage
+        const inputString = "Hello World";
+        console.log(removeSpaces(inputString)); // Output: "HelloWorld"
+
+        //-------------------------------------------------------------------------------
+
+        // Function to remove spaces from a string using regular expressions
+        function removeSpaces(str) {
+            return str.replace(/\s/g, ''); // Using regular expression to replace all whitespace characters with an empty string
+        }
+
+        // Example usage
+        const inputStringb = "Hello World";
+        console.log(removeSpaces(inputStringb)); // Output: "HelloWorld"
+
+
+
+    </script>
+</body>
+
+</html>

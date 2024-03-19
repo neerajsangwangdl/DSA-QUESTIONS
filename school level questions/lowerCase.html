@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to convert a string to lowercase using built-in method
+        function toLowerCase(str) {
+            return str.toLowerCase();
+        }
+
+        // Example usage
+        const inputString = "Hello World";
+        console.log(toLowerCase(inputString)); // Output: "hello world"
+
+        //------------------------------------------------------------------------------------------
+
+
+        // Here's a simple algorithm in JavaScript to convert a string to lowercase:
+
+        // Algorithm:
+
+        // Iterate through each character of the string.
+        // Check if the character is an uppercase letter.
+        // If it is, convert it to lowercase using ASCII conversion (by adding 32 to the ASCII value).
+        // Append the lowercase character to a new string.
+        // Return the new string containing the converted lowercase characters.
+
+        // Function to convert a string to lowercase
+
+        function toLowerCase(str) {
+            let result = ''; // Initialize an empty string to store the lowercase characters
+
+            // Iterate through each character of the string
+            for (let i = 0; i < str.length; i++) {
+                // Check if the character is an uppercase letter
+                if (str[i] >= 'A' && str[i] <= 'Z') {
+                    // Convert the uppercase letter to lowercase using ASCII conversion
+                    result += String.fromCharCode(str.charCodeAt(i) + 32);
+                } else {
+                    // If the character is not an uppercase letter, append it as it is
+                    result += str[i];
+                }
+            }
+
+            return result; // Return the string with all characters converted to lowercase
+        }
+
+        // Example usage
+        const inputString1 = "Hello World";
+        console.log(toLowerCase(inputString1)); // Output: "hello world"
+
+
+
+    </script>
+</body>
+
+</html>

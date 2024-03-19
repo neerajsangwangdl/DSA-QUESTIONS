@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function swapKthElements() {
+        //     const array = [1, 2, 3, 4, 5, 6];
+        //     const k = 3;
+        //     // Validate input
+        //     if (k <= 0 || k > array.length) {
+        //         console.log("Invalid value of k.");
+        //         return;
+        //     }
+
+        //     // Calculate indices of the k-th elements from start and end
+        //     const kthFromStart = k - 1;
+        //     const kthFromEnd = array.length - k;
+
+        //     // Swap the k-th elements
+        //     const temp = array[kthFromStart];
+        //     array[kthFromStart] = array[kthFromEnd];
+        //     array[kthFromEnd] = temp;
+
+        //     console.log("Original array:", array);
+        //     console.log("Array after swapping", k + "-th elements:", swapKthElements());
+
+        //     console.log(swapKthElements())
+        //     return arr;
+        // }
+
+        // // Test case
+
+        // swapKthElements()
+
+        function swapKthElements() {
+            const arr = [1, 2, 3, 4, 5, 6,7,8,9];
+            const k = 6;
+            // Validate input
+            if (k <= 0 || k > arr.length) {
+                console.log("Invalid value of k.");
+                return;
+            }
+
+            // Calculate indices of the k-th elements from start and end
+            const kthFromStart = k - 1;
+            const kthFromEnd = arr.length - k;
+
+            // Swap the k-th elements
+            const temp = arr[kthFromStart];
+            arr[kthFromStart] = arr[kthFromEnd];
+            arr[kthFromEnd] = temp;
+
+            console.log("Original array:", arr);
+            console.log("Array after swapping", k + "-th elements:", swapKthElements());
+
+            return arr;
+        }
+
+        // Test case
+        swapKthElements()
+
+
+
+    </script>
+</body>
+
+</html>

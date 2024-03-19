@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         Algorithm:
+
+        // Initialize two variables, smallest and largest, to store the smallest and largest 
+        // elements found so far.
+        // Set smallest to Infinity and largest to -Infinity.
+        // Iterate through each element of the array.
+        // Inside the loop, compare each element with smallest and largest.
+        // If the current element is smaller than smallest, update smallest.
+        // If the current element is larger than largest, update largest.
+        // After the loop, return an object containing smallest and largest.
+        // This algorithm ensures that the smallest and largest elements are found 
+        // by iterating through the array only once.
+
+        // Function to find the smallest and largest elements in an array
+        function findSmallestAndLargest(arr) {
+            let smallest = Infinity; // Initialize smallest to Infinity
+            let largest = -Infinity; // Initialize largest to -Infinity
+
+            // Iterate through each element of the array
+            for (let num of arr) {
+                // Update smallest if current element is smaller
+                if (num < smallest) {
+                    smallest = num;
+                }
+                // Update largest if current element is larger
+                if (num > largest) {
+                    largest = num;
+                }
+            }
+
+            return { smallest, largest }; // Return an object containing smallest and largest elements
+        }
+
+        // Example usage
+        const array = [5, 3, 9, 1, 7];
+        const { smallest, largest } = findSmallestAndLargest(array);
+        console.log("Smallest element:", smallest); // Output: 1
+        console.log("Largest element:", largest); // Output: 9
+
+    </script>
+</body>
+
+</html>

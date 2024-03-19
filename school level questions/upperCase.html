@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Algorithm:
+
+        // Initialize an empty string to store the uppercase version of the input string.
+        // Iterate through each character of the input string.
+        // For each character:
+        // Check if it is a lowercase letter (i.e., its ASCII value falls within the range of lowercase letters).
+        // If it is a lowercase letter, convert it to uppercase by subtracting 32 from its ASCII 
+        // value (since the ASCII codes for uppercase and lowercase letters differ by 32).
+        // Otherwise, leave it unchanged (e.g., if it's already an uppercase letter or not a letter at all).
+        // Append the modified character to the result string.
+        // After iterating through all characters, return the resulting string containing all characters 
+        // converted to uppercase.
+
+        // Function to convert a string to uppercase
+        function toUpperCase(str) {
+            let result = ''; // Initialize an empty string to store the uppercase version of the input string
+
+            // Iterate through each character of the input string
+            for (let i = 0; i < str.length; i++) {
+                let charCode = str.charCodeAt(i); // Get the ASCII code of the current character
+
+                // Check if the current character is a lowercase letter
+                if (charCode >= 97 && charCode <= 122) { // ASCII codes for lowercase letters
+                    // Convert the lowercase letter to uppercase by subtracting 32 from its ASCII code
+                    charCode -= 32;
+                }
+
+                // Append the modified character to the result string
+                result += String.fromCharCode(charCode);
+            }
+
+            return result; // Return the resulting string containing all characters converted to uppercase
+        }
+
+        // Example usage
+        const inputStringb = "Hello World";
+        console.log("Uppercase conversion:", toUpperCase(inputStringb)); // Output: "HELLO WORLD"
+
+        // Function to convert a string to uppercase using built-in method
+        function toUpperCase(str) {
+            return str.toUpperCase();
+        }
+
+        // Example usage
+        const inputString = "Hello World";
+        console.log("Uppercase conversion:", toUpperCase(inputString)); // Output: "HELLO WORLD"
+
+
+    </script>
+</body>
+
+</html>

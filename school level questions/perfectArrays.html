@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         Algorithm:
+
+        // Initialize variables sum and product to store the sum and product of array elements, respectively.
+        // Iterate through each element of the array.
+        // Add the current element to sum.
+        // Multiply the current element with product.
+        // After the loop, check if sum is equal to product.
+        // If they are equal, return true (indicating the array is a perfect array).
+        // Otherwise, return false.
+
+        // Function to determine if an array is a perfect array
+        function isPerfectArray(arr) {
+            let sum = 0; // Initialize sum to store the sum of array elements
+            let product = 1; // Initialize product to store the product of array elements
+
+            // Iterate through each element of the array
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]; // Add the current element to sum
+                product *= arr[i]; // Multiply the current element with product
+            }
+
+            // Check if sum is equal to product
+            return sum === product;
+        }
+
+        // Example usage
+        const array1 = [2, 3, 6];
+        console.log("Is array1 a perfect array?", isPerfectArray(array1)); // Output: true (2 + 3 + 6 = 2 * 3 * 6)
+
+        const array2 = [1, 2, 3];
+        console.log("Is array2 a perfect array?", isPerfectArray(array2)); // Output: false (1 + 2 + 3 != 1 * 2 * 3)
+
+        //         A perfect array is a mathematical construct where the sum of its elements 
+        //         is equal to the product of its elements. In other words, if you add up all 
+        //         the numbers in the array and multiply them together, you get the same result.
+
+        //          For example, consider the array [2, 3, 6]. The sum of its elements 
+        //          is 2 + 3 + 6 = 11, and the product of its elements is 2 * 3 * 6 = 36. 
+        //          In this case, the sum is equal to the product (11 = 36), so the array [2, 3, 6] 
+        //          is a perfect array.
+
+        // Function to determine if an array is a perfect array
+        function isPerfectArray(arr) {
+            let sum = 0;
+            for (let num of arr) {
+                sum += num;
+            }
+
+            for (let i = 0; i < arr.length; i++) {
+                let productOfOthers = 1;
+                for (let j = 0; j < arr.length; j++) {
+                    if (i !== j) {
+                        productOfOthers *= arr[j];
+                    }
+                }
+                if (productOfOthers !== arr[i]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Example usage
+        const array3 = [2, 3, 6];
+        console.log("Is array1 a perfect array?", isPerfectArray(array3)); // Output: true
+
+        const array4 = [1, 2, 3];
+        console.log("Is array2 a perfect array?", isPerfectArray(array4)); // Output: false
+
+
+    </script>
+</body>
+
+</html>

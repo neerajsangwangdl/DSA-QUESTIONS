@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Algorithm:
+
+        // Initialize an array to store the indices of vowels in the string.
+        // Iterate through each character of the string:
+        // If the character is a vowel, store its index in the array of vowel indices.
+        // Initialize two pointers, left and right, to the start and end of the array 
+        // of vowel indices, respectively.
+        // Swap the characters at indices left and right in the string, and increment left 
+        // and decrement right, until left is greater than or equal to right.
+        // After reversing the vowels, return the modified string.
+
+        // Function to check if a character is a vowel
+        function isVowel(char) {
+            return /[aeiou]/i.test(char); // Case-insensitive check for vowels (both lowercase and uppercase)
+        }
+
+        // Function to reverse the vowels in a string
+        function reverseVowels(str) {
+            const vowelsIndices = []; // Array to store indices of vowels in the string
+
+            // Find indices of vowels in the string
+            for (let i = 0; i < str.length; i++) {
+                if (isVowel(str[i])) {
+                    vowelsIndices.push(i);
+                }
+            }
+
+            // Reverse the vowels using two pointers approach
+            let left = 0;
+            let right = vowelsIndices.length - 1;
+            while (left < right) {
+                // Swap characters at vowel indices
+                [str[vowelsIndices[left]], str[vowelsIndices[right]]] = [str[vowelsIndices[right]], str[vowelsIndices[left]]];
+                left++;
+                right--;
+            }
+
+            return str; // Return the modified string with reversed vowels
+        }
+
+        // Example usage
+        const inputString = "hello world";
+        console.log("String with reversed vowels:", reverseVowels(inputString)); // Output: "hollo werld"
+
+        //-------------------------------------------------------------------------------------
+
+        // Function to reverse the vowels in a string
+        function reverseVowels(str) {
+            return str.replace(/[aeiouAEIOU]/g, (match, offset, input) => input[input.length - 1 - offset]);
+        }
+
+        // Example usage
+        const inputStringb = "hello world";
+        console.log("String with reversed vowels:", reverseVowels(inputStringb)); // Output: "hollo werld"
+
+        // The replacement function takes the matched vowel (match), its index (offset), and 
+        // the entire input string (input).
+        // We use the index and the input string length to access the corresponding 
+        // character from the end of the string, effectively reversing the vowels.
+        // The replacement function replaces each matched vowel with its reversed counterpart.
+        // Finally, the modified string with reversed vowels is returned.
+
+    </script>
+</body>
+
+</html>

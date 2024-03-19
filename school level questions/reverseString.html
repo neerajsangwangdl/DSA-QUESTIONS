@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //             Algorithm:
+
+        // Initialize an empty string to store the reversed string.
+        // Iterate through each character of the input string, starting from the last character.
+        // Append each character to the empty string in reverse order.
+        // After the loop, return the reversed string.
+
+        // Function to reverse a string
+        function reverseString(str) {
+            let reversed = ''; // Initialize an empty string to store the reversed string
+
+            // Iterate through each character of the input string in reverse order
+            for (let i = str.length - 1; i >= 0; i--) {
+                reversed += str[i]; // Append each character to the reversed string
+            }
+
+            return reversed; // Return the reversed string
+        }
+
+        // Example usage
+        const inputString = "Hello World";
+        console.log("Reversed string:", reverseString(inputString)); // Output: "dlroW olleH"
+
+
+        //--------------------------------------------------------------------
+
+        // Function to reverse a string
+        function reverseString(str) {
+            // Split the string into an array of characters, reverse the array, and join it back into a string
+            return str.split('').reverse().join('');
+        }
+
+        // Example usage
+        const inputStringb = "Hello World";
+        console.log("Reversed string:", reverseString(inputStringb)); // Output: "dlroW olleH"
+
+        split('') //: Splits the string into an array of characters.
+        reverse() //: Reverses the order of elements in the array.
+        join('') //: Joins the array elements back into a string.
+
+    </script>
+</body>
+
+</html>
